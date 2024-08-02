@@ -1,5 +1,11 @@
 # CentroComunitario
 
+## Comandos de Execução
+
+Para executar a aplicação na porta 3000 - ˋˋˋnpm startˋˋˋ
+Para executar o docker em 2° plano - ˋˋˋdocker-compose up -d --buildˋˋˋ
+Para parar o docker - ˋˋˋdocker-compose downˋˋˋ
+
 # Descrição do problema
 
 Durante emergências, como desastres naturais ou crises sociais, centros comunitários podem desempenhar um papel crucial ao fornecer abrigo, alimentos, cuidados médicos e outros serviços essenciais para a comunidade. Para garantir que os recursos sejam utilizados de maneira eficiente e que as necessidades da comunidade sejam atendidas, é necessário um bom sistema de informações para ajudar na tomada de decisões e na coordenação dos esforços entre diferentes centros.
@@ -26,13 +32,13 @@ Os centros comunitários poderão trocar recursos entre eles. Para isso, eles de
 
 #### Tabela de pontos dos recursos
 
-| Item | Pontos |
+| Item                         | Pontos   |
 | ---------------------------- | -------- |
-| 1 Médico | 4 pontos |
-| 1 Voluntário | 3 pontos |
+| 1 Médico                     | 4 pontos |
+| 1 Voluntário                 | 3 pontos |
 | 1 Kit de suprimentos médicos | 7 pontos |
-| 1 Veículo de transporte | 5 pontos |
-| 1 Cesta básica | 2 pontos |
+| 1 Veículo de transporte      | 5 pontos |
+| 1 Cesta básica               | 2 pontos |
 
 ### Relatórios
 
@@ -54,7 +60,7 @@ A API deve oferecer os seguintes relatórios:
 - Sua API deve estar coberta por testes unitários.
 - Da descrição acima você pode escrever uma solução básica ou adicionar requisitos não descritos. Use seu tempo com sabedoria; Uma solução ótima e definitiva pode levar muito tempo para ser efetiva, então você deve trazer a melhor solução possível, que leve o mínimo de tempo, mas que ainda seja capaz de demonstrar suas habilidades.
 - Comente qualquer dúvida e cada decisão tomada.
-- Publique o projeto no github e envie o repositório  para o e-mail manoel.neto@phoebustecnologia.com.br
--  Implemente o máximo possível dos requisitos mencionados. Caso não seja possível atender todos os itens solicitados, envie o repositório mesmo assim.
-teste-pratico-nodejs.md
-Exibindo teste-pratico-nodejs.md.
+- Publique o projeto no github e envie o repositório para o e-mail manoel.neto@phoebustecnologia.com.br
+- Implemente o máximo possível dos requisitos mencionados. Caso não seja possível atender todos os itens solicitados, envie o repositório mesmo assim.
+  teste-pratico-nodejs.md
+  Exibindo teste-pratico-nodejs.md.
