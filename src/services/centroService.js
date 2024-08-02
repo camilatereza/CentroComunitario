@@ -1,8 +1,8 @@
-import { Error } from "mongoose";
-import centroComunitario from "../models/centroComunitario";
-import { existCentro } from "../utils/validation";
+const { Error } = require("mongoose");
+const centroComunitario = require("../models/centroComunitario");
+const { existCentro } = require("../utils/validation");
 
-export async function adicionarCentro(centroBody) {
+async function adicionarCentro(centroBody) {
   try {
     const exist = existCentro(centroBody.nome);
 
@@ -19,7 +19,7 @@ export async function adicionarCentro(centroBody) {
   }
 }
 
-export async function atualizarOcupacao(id, quantidadeAtual) {
+async function atualizarOcupacao(id, quantidadeAtual) {
   try {
     const centro = await centroComunitario.findById(id);
     if (!centro) {
@@ -43,7 +43,7 @@ export async function atualizarOcupacao(id, quantidadeAtual) {
   }
 }
 
-export async function realizarIntercambio(
+async function realizarIntercambio(
   id,
   { centroDestinoId, recursosOrigem, recursosDestino }
 ) {
@@ -130,3 +130,9 @@ function atualizarRecursos(centro, recursos, operacao) {
     }
   });
 }
+
+module.exports = {
+  adicionarCentro,
+  atualizarOcupacao,
+  realizarIntercambio,
+};

@@ -1,8 +1,8 @@
-import { MongooseError } from "mongoose";
+const { MongooseError } = require("mongoose");
 const CentroComunitario = require("../models/centroComunitario");
 const Negociacao = require("../models/negociacao");
 
-export async function existCentro(centro) {
+ async function existCentro(centro) {
   try {
     const centro = await CentroComunitario.findOne(centro);
 
@@ -18,7 +18,7 @@ export async function existCentro(centro) {
   }
 }
 
-export async function existNegociacao(negociacaoNome) {
+ async function existNegociacao(negociacaoNome) {
   try {
     const negociacao = await Negociacao.findOne(negociacaoNome);
 
@@ -31,3 +31,8 @@ export async function existNegociacao(negociacaoNome) {
     throw new MongooseError(`Erro ao encontrar Negociação ${err.message}`);
   }
 }
+
+module.exports = {
+  existCentro,
+  existNegociacao,
+};

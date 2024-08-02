@@ -1,8 +1,8 @@
-import negociacao from "../models/negociacao";
-import centroComunitario from "../models/centroComunitario";
-import { existCentro, existNegociacao } from "../utils/validation";
+const negociacao = require("../models/negociacao");
+const centroComunitario = require("../models/centroComunitario");
+const { existCentro, existNegociacao } = require("../utils/validation");
 
-export async function relatorioOcupacao(dataInicio, dataFim) {
+async function relatorioOcupacao(dataInicio, dataFim) {
   try {
     const filtro = {};
 
@@ -39,7 +39,7 @@ export async function relatorioOcupacao(dataInicio, dataFim) {
     );
   }
 }
-export async function relatorioRecursos(centroId, tipo) {
+async function relatorioRecursos(centroId, tipo) {
   try {
     const exist = existCentro(centroId);
     if (!centro) {
@@ -57,7 +57,7 @@ export async function relatorioRecursos(centroId, tipo) {
     );
   }
 }
-export async function relatorioIntercambio(dataInicio, dataFim, centroId) {
+async function relatorioIntercambio(dataInicio, dataFim, centroId) {
   try {
     const filtro = {};
 
@@ -94,3 +94,9 @@ export async function relatorioIntercambio(dataInicio, dataFim, centroId) {
     );
   }
 }
+
+module.exports = {
+  relatorioIntercambio,
+  relatorioOcupacao,
+  relatorioRecursos,
+};

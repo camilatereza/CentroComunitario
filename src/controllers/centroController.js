@@ -1,8 +1,8 @@
-import { validationResult } from "express-validator";
+const { validationResult } = require("express-validator");
 const centroService = require("../services/centroService");
 
 // POST /centros - Adicionar um novo centro comunitário
-export async function adicionarCentro(request, response) {
+async function adicionarCentro(request, response) {
   const errors = validationResult(request);
   if (!errors.isEmpty()) {
     return response.status(400).json({ errors: errors.array() });
@@ -24,7 +24,7 @@ export async function adicionarCentro(request, response) {
 }
 
 // PUT /centros/:id/ocupacao - Atualizar ocupação de um centro comunitário
-export async function atualizarOcupacao(request, response) {
+async function atualizarOcupacao(request, response) {
   const errors = validationResult(request);
   if (!errors.isEmpty()) {
     return response.status(400).json({ errors: errors.array() });
@@ -47,7 +47,7 @@ export async function atualizarOcupacao(request, response) {
 }
 
 // POST /centros/:id/intercambio - Realizar intercâmbio de recursos entre centros
-export async function realizarIntercambio(request, response) {
+async function realizarIntercambio(request, response) {
   const errors = validationResult(request);
   if (!errors.isEmpty()) {
     return response.status(400).json({ errors: errors.array() });
@@ -70,3 +70,9 @@ export async function realizarIntercambio(request, response) {
     return response.status(400).json({ message: error.message });
   }
 }
+
+module.exports = {
+  adicionarCentro,
+  atualizarOcupacao,
+  realizarIntercambio,
+};
